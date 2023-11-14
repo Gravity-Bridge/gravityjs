@@ -1,3 +1,6 @@
 [submodule "gravity-proto-src"]
 	path = gravity-proto-src
 	url = https://github.com/Gravity-Bridge/Gravity-Bridge
+[submodule "ethermint"]
+	path = ethermint-proto-src
+	url = https://github.com/althea-net/ethermint
