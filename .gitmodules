@@ -4,3 +4,6 @@
 [submodule "ethermint"]
 	path = ethermint-proto-src
 	url = https://github.com/althea-net/ethermint
+[submodule "google-proto-src"]
+	path = google-proto-src
+	url = https://github.com/protocolbuffers/protobuf

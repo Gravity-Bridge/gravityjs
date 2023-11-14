@@ -1,14 +1,16 @@
 #!/bin/bash
 # NOTE: protoc is required
 
-# Generates compiled proto ts files from the althea src protos via protoc
+# Generates compiled proto ts files from the gravity src protos via protoc
 
-ALTHEA_FOLDER="$(pwd)/althea-proto-src"
-CANTO_FOLDER="$ALTHEA_FOLDER/third_party/proto/canto"
-ETHERMINT_FOLDER="$ALTHEA_FOLDER/third_party/proto/ethermint"
+GRAVITY_FOLDER="$(pwd)/gravity-proto-src/module"
+ETHERMINT_FOLDER="$(pwd)/ethermint-proto-src"
+GOOGLE_FOLDER="$(pwd)/google-proto-src/"
 OUT_FOLDER="$(pwd)/packages/proto/src/proto"
-I="$ALTHEA_FOLDER/proto"
-INCLUDES="$ALTHEA_FOLDER/third_party/proto"
+I="$GRAVITY_FOLDER/proto"
+INCLUDES="$GRAVITY_FOLDER/third_party/proto"
+ETHERMINT_INCLUDES="$ETHERMINT_FOLDER/proto"
+GOOGLE_INCLUDES="$GOOGLE_FOLDER/src"
 mkdir -p $OUT_FOLDER
 
 compile-protos () {
@@ -23,14 +25,10 @@ compile-protos () {
     --es_opt target=ts \
     --proto_path="$I" \
     --proto_path="$INCLUDES" \
+    --proto_path="$ETHERMINT_INCLUDES" \
+    --proto_path="$GOOGLE_INCLUDES" \
     $(find $1 -iname "*.proto")
 }
 
 # Create the compiled protos for the althea modules
-compile-protos $ALTHEA_FOLDER/proto
-
-# Create the compiled protos for canto too
-compile-protos $CANTO_FOLDER
-
-# Create the compiled protos for ethermint too
-compile-protos $ETHERMINT_FOLDER
+compile-protos $GRAVITY_FOLDER/proto
