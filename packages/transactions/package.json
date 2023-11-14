@@ -1,7 +1,7 @@
 {
-  "name": "@althea-net/transactions",
-  "description": "Transactions generator for Althea-L1",
-  "version": "1.0.2",
+  "name": "@gravity-bridge/transactions",
+  "description": "Transactions generator for Gravity Bridge",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -27,7 +27,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "@althea-net/eip712": "^0.5.2",
+    "@gravity-bridge/eip712": "^0.0.1",
     "link-module-alias": "^1.2.0",
     "shx": "^0.3.4"
   },
