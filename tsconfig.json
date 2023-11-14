@@ -3,11 +3,21 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-        "@althea-net/address-converter": ["packages/address-converter"],
-        "@althea-net/eip712":["packages/eip712"],
-        "@althea-net/proto":["packages/proto"],
-        "@althea-net/provider":["packages/provider"],
-        "@althea-net/transactions":["packages/transactions"]
+      "@gravity-bridge/address-converter": [
+        "packages/address-converter"
+      ],
+      "@gravity-bridge/eip712": [
+        "packages/eip712"
+      ],
+      "@gravity-bridge/proto": [
+        "packages/proto"
+      ],
+      "@gravity-bridge/provider": [
+        "packages/provider"
+      ],
+      "@gravity-bridge/transactions": [
+        "packages/transactions"
+      ]
     }
   }
 }

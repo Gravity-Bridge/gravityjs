@@ -1,6 +1,6 @@
 {
   "npmClient": "yarn",
-  "name": "altheajs",
+  "name": "gravityjs",
   "packages": [
     "packages/*"
   ],

@@ -1,15 +1,14 @@
-# altheajs
+# GravityJS
 
-JS and TS libs for interacting with Althea-L1 via Ethereum wallets like MetaMask
+JS and TS libs for interacting with Gravity Bridge via Ethereum wallets like MetaMask
 
 ## Credits
 
-This repo is a fork of evmos/evmosjs, and all of the shared history is preserved. Please see the contributors page or the commit history to see the original creators and their contributions to that upstream repo.
+This repo is a fork of evmos/evmosjs, and all of the shared history is preserved. Please see the contributors page or the commit history to see the original creators and their contributions to that upstream repo. In fact it is a fork of althea-L1/altheajs, so it shares that history too.
 
 ## Installation
 
-altheajs uses [buf.build](https://buf.build/) to manage [althea Protobuf dependencies](https://buf.build/althea). To install altheajs packages in your project,
-follow the instructions corresponding to your package manager.
+To install gravityjs packages in your project, follow the instructions corresponding to your package manager.
 
 ### NPM
 
@@ -22,13 +21,13 @@ Add the following line to an `.npmrc` file in your project root:
 Then run:
 
 ```bash
-npm install altheajs
+npm install gravityjs
 ```
 
 Or:
 
 ```bash
-npm install @althea-net/<package>
+npm install @gravity-bridge/<package>
 ```
 
 ### Yarn v2.x or v3.x
@@ -44,13 +43,13 @@ npmScopes:
 Then run:
 
 ```bash
-yarn add altheajs
+yarn add gravityjs
 ```
 
 Or:
 
 ```bash
-yarn add @althea-net/<package>
+yarn add @gravity-bridge/<package>
 ```
 
 Note that Yarn v1 is not supported ([see explanation](https://docs.buf.build/bsr/remote-packages/npm#other-package-managers)).
@@ -62,9 +61,9 @@ Note that Yarn v1 is not supported ([see explanation](https://docs.buf.build/bsr
 Query the account number, sequence, and pubkey for a given address.
 
 ```ts
-import { generateEndpointAccount } from '@althea-net/provider'
+import { generateEndpointAccount } from '@gravity-bridge/provider'
 
-const address = 'althea1...'
+const address = 'gravity1...'
 
 // Find node urls for either mainnet or testnet here:
 // https://docs.evmos.org/develop/api/networks.
@@ -84,7 +83,7 @@ const rawResult = await fetch(
 
 const result = await rawResult.json()
 
-// The response format is available at @althea-net/provider/rest/account/AccountResponse.
+// The response format is available at @gravity-bridge/provider/rest/account/AccountResponse.
 // Note that the `pub_key` will be `null` if the address has not sent any transactions.
 /*
   account: {
@@ -114,7 +113,7 @@ transactions, and it must be encoded as a compressed key in
 #### Keplr
 
 ```ts
-const cosmosChainID = 'althea_417834-3' // Hackathon testnet
+const cosmosChainID = 'gravity-bridge-3' // Hackathon testnet
 
 const account = await window?.keplr?.getKey(cosmosChainID)
 const pk = Buffer.from(account.pubKey).toString('base64')
@@ -162,7 +161,7 @@ const pk = Buffer.from(
 
 Create a transaction payload which can be signed using either Metamask or Keplr.
 
-This example uses `MsgSend`. View all signable transaction payloads in the [Transaction Docs](https://github.com/althea-net/altheajs/tree/main/docs/transactions).
+This example uses `MsgSend`. View all signable transaction payloads in the [Transaction Docs](https://github.com/Gravity-Bridge/gravityjs/tree/main/docs/transactions).
 
 ```ts
 import {
@@ -173,11 +172,11 @@ import {
   MsgSendParams,
   createTxMsgSend,
   TxGenerated,
-} from '@althea-net/transactions'
+} from '@gravity-bridge/transactions'
 
 const chain: Chain = {
   chainId: 417834,
-  cosmosChainId: 'althea_417834-3',
+  cosmosChainId: 'gravity-bridge-3',
 }
 
 // Populate the transaction sender parameters using the
@@ -193,7 +192,7 @@ const sender: Sender = {
 
 const fee: Fee = {
   amount: '4000000000000000',
-  denom: 'aalthea',
+  denom: 'ugraviton',
   gas: '200000',
 }
 
@@ -209,7 +208,7 @@ const context: TxContext = {
 const params: MsgSendParams = {
   destinationAddress: <destination_address>,
   amount: <transaction_amount>,
-  denom: 'aalthea',
+  denom: 'ugraviton',
 }
 
 const tx: TxGenerated = createTxMsgSend(context, params)
@@ -217,14 +216,13 @@ const tx: TxGenerated = createTxMsgSend(context, params)
 
 ### Sign the Transaction with MetaMask
 
-Althea-L1 supports EIP-712 signatures for Cosmos payloads to be signed using Ethereum wallets such as MetaMask.
+Gravity Bridge supports EIP-712 signatures for Cosmos payloads to be signed using Ethereum wallets such as MetaMask.
 The signature MUST NOT go in the signature field, and instead must be placed in an ExtensionOptionsWeb3Tx.
-In a future update to Althea-L1 ExtensionOptionsWeb3Tx will be deprecated for a new style of EIP-712 signing.
 
 ```ts
-import { createTxRaw } from '@althea-net/proto'
-import { altheaToEth } from '@althea-net/address-converter'
-import { signatureToWeb3Extension } from '@althea-net/transactions';
+import { createTxRaw } from '@gravity-bridge/proto'
+import { gravityToEth } from '@gravity-bridge/address-converter'
+import { signatureToWeb3Extension } from '@gravity-bridge/transactions';
 
 // First, populate a TxContext object and create a signable Tx payload.
 // (See 'Create a Signable Transaction' to learn how to create these).
@@ -236,7 +234,7 @@ const { sender } = context
 // Initialize MetaMask and sign the EIP-712 payload.
 await window.ethereum.enable()
 
-const senderHexAddress = evmosToEth(sender.accountAddress)
+const senderHexAddress = gravityToEth(sender.accountAddress)
 const eip712Payload = JSON.stringify(tx.eipToSign)
 
 const signature = await window.ethereum.request({
@@ -261,10 +259,11 @@ const signedTx = createTxRaw(
 
 ### Sign the Transaction with Keplr (SignDirect)
 
-AltheaJS supports Cosmos SDK `SignDirect` payloads that can be signed using Keplr.
+GravityJS supports Cosmos SDK `SignDirect` payloads that can be signed using Keplr.
+However, if you have an existing workflow to support Keplr and do not need Ledger support, then GravityJS is not necessary.
 
 ```ts
-import { createTxRaw } from '@althea-net/proto'
+import { createTxRaw } from '@gravity-bridge/proto'
 
 // First, populate a TxContext object and create a signable Tx payload.
 // (See 'Create a Signable Transaction' to learn how to create these).
@@ -304,13 +303,13 @@ const signedTx = createTxRaw(
 
 ### Sign the Transaction with Keplr (EIP-712)
 
-AltheaJS also supports signing [EIP-712](https://eips.ethereum.org/EIPS/eip-712) payloads using Keplr. This is necessary for Ledger users on Keplr, since the Ledger device cannot sign `SignDirect` payloads.
+GravityJS also supports signing [EIP-712](https://eips.ethereum.org/EIPS/eip-712) payloads using Keplr.
+This is necessary for Ledger users on Keplr, since the Ledger device cannot sign `SignDirect` payloads.
 The signature MUST NOT go in the signature field, and instead must be placed in an ExtensionOptionsWeb3Tx.
-In a future update to Althea-L1 ExtensionOptionsWeb3Tx will be deprecated for a new style of EIP-712 signing.
 
 ```ts
 import { EthSignType } from '@keplr-wallet/types';
-import { createTxRaw } from '@althea-net/proto'
+import { createTxRaw } from '@gravity-bridge/proto'
 
 // First, populate a TxContext object and create a signable Tx payload.
 // (See 'Create a Signable Transaction' to learn how to create these).
@@ -354,13 +353,13 @@ Regardless of how the transaction is signed, broadcasting takes place the same w
 import {
   generateEndpointBroadcast,
   generatePostBodyBroadcast,
-} from '@althea-net/provider'
+} from '@gravity-bridge/provider'
 
 // First, sign a transaction using MetaMask or Keplr.
 const signedTx = createTxRaw(...)
 
 // Use the Tx broadcasting API usually on port 1317
-const nodeUrl = "https://althea.zone:1317"
+const nodeUrl = "https://gravitychain.io:1317"
 
 const postOptions = {
   method: 'POST',
