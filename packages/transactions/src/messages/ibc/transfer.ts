@@ -1,10 +1,10 @@
-import { createIBCMsgTransfer as protoIBCMsgTransfer } from '@althea-net/proto'
+import { createIBCMsgTransfer as protoIBCMsgTransfer } from '@gravity-bridge/proto'
 
 import {
   generateTypes,
   createIBCMsgTransfer,
   CREATE_IBC_MSG_TRANSFER_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import { createTransactionPayload, TxContext } from '../base'
 
 export interface IBCMsgTransferParams {

@@ -1,10 +1,10 @@
-import { createMsgRevoke } from '@althea-net/proto'
+import { createMsgRevoke } from '@gravity-bridge/proto'
 
 import {
   generateTypes,
   createMsgRevokeGenericAuthorization,
   MSG_REVOKE_GENERIC_AUTHORIZATION_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import { createTransactionPayload, TxContext } from '../base'
 
 export interface MsgGenericRevokeParams {

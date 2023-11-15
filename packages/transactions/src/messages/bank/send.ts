@@ -1,7 +1,7 @@
-import { createMsgSend as protoCreateMsgSend } from '@althea-net/proto'
-import { createMsgSend } from '@althea-net/eip712'
+import { createMsgSend as protoCreateMsgSend } from '@gravity-bridge/proto'
+import { createMsgSend } from '@gravity-bridge/eip712'
 import { createTransactionPayload, TxContext, wrapTypeToArray } from '../base'
-import { generateTypes, MSG_SEND_TYPES } from '@althea-net/eip712'
+import { generateTypes, MSG_SEND_TYPES } from '@gravity-bridge/eip712'
 
 export const createEIP712MsgSend = (context: TxContext, params: MsgSendParams[]) => {
   const types = generateTypes(MSG_SEND_TYPES)

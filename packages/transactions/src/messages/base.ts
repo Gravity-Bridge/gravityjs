@@ -3,13 +3,13 @@ import {
   generateFee,
   generateMessageWithMultipleTransactions,
   createTypedData,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import {
   createTransactionWithMultipleMessages,
   MessageGenerated,
   createStdFee,
   createStdSignDocFromProto,
-} from '@althea-net/proto'
+} from '@gravity-bridge/proto'
 import { Chain, Fee, Sender, TxPayload } from './common'
 
 /**

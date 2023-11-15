@@ -1,10 +1,10 @@
-import { createMsgUndelegate as protoMsgUndelegate } from '@althea-net/proto'
+import { createMsgUndelegate as protoMsgUndelegate } from '@gravity-bridge/proto'
 
 import {
   generateTypes,
   MSG_UNDELEGATE_TYPES,
   createMsgUndelegate,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 
 import { createTransactionPayload, TxContext } from '../base'
 

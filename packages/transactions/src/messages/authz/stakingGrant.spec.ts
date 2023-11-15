@@ -1,4 +1,4 @@
-import { createMsgGrant, createStakeAuthorization, Proto } from '@althea-net/proto'
+import { createMsgGrant, createStakeAuthorization, Proto } from '@gravity-bridge/proto'
 import { createTransactionPayload } from '../base'
 
 import {

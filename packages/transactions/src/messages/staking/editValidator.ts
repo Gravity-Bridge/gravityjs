@@ -1,10 +1,10 @@
-import { createMsgEditValidator as protoMsgEditValidator } from '@althea-net/proto'
+import { createMsgEditValidator as protoMsgEditValidator } from '@gravity-bridge/proto'
 
 import {
   generateTypes,
   MSG_EDIT_VALIDATOR_TYPES,
   createMsgEditValidator,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 
 import { createTransactionPayload, TxContext } from '../base'
 

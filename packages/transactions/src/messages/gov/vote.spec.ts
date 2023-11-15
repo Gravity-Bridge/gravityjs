@@ -1,5 +1,5 @@
-import { createMsgVote as protoMsgVote } from '@althea-net/proto'
-import { generateTypes, createMsgVote, MSG_VOTE_TYPES } from '@althea-net/eip712'
+import { createMsgVote as protoMsgVote } from '@gravity-bridge/proto'
+import { generateTypes, createMsgVote, MSG_VOTE_TYPES } from '@gravity-bridge/eip712'
 import { MsgVoteParams, createTxMsgVote } from './vote'
 import { createTransactionPayload } from '../base'
 import TestUtils from '../../tests/utils'

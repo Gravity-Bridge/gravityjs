@@ -3,7 +3,7 @@ import {
   createMsgDelegate as protoMsgDelegate,
   createTransaction,
   createTransactionWithMultipleMessages,
-} from '@althea-net/proto'
+} from '@gravity-bridge/proto'
 import {
   createEIP712,
   generateFee,
@@ -12,7 +12,7 @@ import {
   generateTypes,
   createMsgSend,
   MSG_SEND_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 
 import { createTransactionPayload } from './base'
 import TestUtils from '../tests/utils'

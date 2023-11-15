@@ -1,4 +1,4 @@
-import { createMsgRevoke, RevokeMessages } from '@althea-net/proto'
+import { createMsgRevoke, RevokeMessages } from '@gravity-bridge/proto'
 
 import { createTransactionPayload, TxContext } from '../base'
 
@@ -7,7 +7,7 @@ export interface MsgStakeRevokeAuthorizationParams {
 }
 
 export const createEIP712MsgStakeRevokeAuthorization = () => {
-  // TODO: EIP-712 is blocked until this message is added to @althea-net/eip712
+  // TODO: EIP-712 is blocked until this message is added to @gravity-bridge/eip712
   return {
     types: {},
     message: {},

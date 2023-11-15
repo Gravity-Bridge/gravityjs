@@ -1,9 +1,9 @@
-import { createMsgBeginRedelegate as protoMsgBeginRedelegate } from '@althea-net/proto'
+import { createMsgBeginRedelegate as protoMsgBeginRedelegate } from '@gravity-bridge/proto'
 import {
   generateTypes,
   createMsgBeginRedelegate,
   MSG_BEGIN_REDELEGATE_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import {
   MsgBeginRedelegateParams,
   createTxMsgBeginRedelegate,

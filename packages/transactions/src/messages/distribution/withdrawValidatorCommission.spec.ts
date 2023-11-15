@@ -1,10 +1,10 @@
-import { createMsgWithdrawValidatorCommission as protoMsgWithdrawValidatorCommission } from '@althea-net/proto'
+import { createMsgWithdrawValidatorCommission as protoMsgWithdrawValidatorCommission } from '@gravity-bridge/proto'
 
 import {
   generateTypes,
   MSG_WITHDRAW_VALIDATOR_COMMISSION_TYPES,
   createMsgWithdrawValidatorCommission,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import {
   MsgWithdrawValidatorCommissionParams,
   createTxMsgWithdrawValidatorCommission,

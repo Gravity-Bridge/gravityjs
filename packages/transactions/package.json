@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@gravity-bridge/eip712": "^0.0.1",
+    "@gravity-bridge/proto": "^0.0.4",
     "link-module-alias": "^1.2.0",
     "shx": "^0.3.4"
   },

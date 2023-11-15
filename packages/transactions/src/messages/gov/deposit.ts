@@ -1,9 +1,9 @@
-import { createMsgDeposit as protoMsgDeposit } from '@althea-net/proto'
+import { createMsgDeposit as protoMsgDeposit } from '@gravity-bridge/proto'
 import {
   generateTypes,
   createMsgDeposit,
   MSG_DEPOSIT_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import { createTransactionPayload, TxContext } from '../base'
 
 export interface MsgDepositParams {

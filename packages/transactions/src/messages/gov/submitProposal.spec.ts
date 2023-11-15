@@ -2,12 +2,12 @@ import {
   createMsgSubmitProposal as protoMsgSubmitProposal,
   createMsgVote as protoMsgVote,
   createAnyMessage,
-} from '@althea-net/proto'
+} from '@gravity-bridge/proto'
 import {
   generateTypes,
   createMsgSubmitProposal,
   MSG_SUBMIT_PROPOSAL_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import {
   MsgSubmitProposalParams,
   createTxMsgSubmitProposal,

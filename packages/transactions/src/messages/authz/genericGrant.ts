@@ -1,13 +1,13 @@
 import {
   createGenericAuthorization as protoCreateGenericAuthorization,
   createMsgGrant,
-} from '@althea-net/proto'
+} from '@gravity-bridge/proto'
 
 import {
   generateTypes,
   createMsgGenericAuthorization,
   MSG_GENERIC_AUTHORIZATION_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import { createTransactionPayload, TxContext } from '../base'
 
 export interface MsgGenericAuthorizationParams {

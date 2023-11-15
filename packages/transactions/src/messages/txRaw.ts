@@ -3,7 +3,7 @@ import {
   createAnyMessage,
   MessageGenerated,
   Proto,
-} from '@althea-net/proto'
+} from '@gravity-bridge/proto'
 
 export function createTxRawEIP712(
   body: Proto.Cosmos.Transactions.Tx.TxBody,

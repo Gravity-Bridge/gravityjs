@@ -1,10 +1,10 @@
-import { createMsgWithdrawDelegatorReward as protoMsgWithdrawDelegatorReward } from '@althea-net/proto'
+import { createMsgWithdrawDelegatorReward as protoMsgWithdrawDelegatorReward } from '@gravity-bridge/proto'
 
 import {
   generateTypes,
   MSG_WITHDRAW_DELEGATOR_REWARD_TYPES,
   createMsgWithdrawDelegatorReward,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import {
   MultipleMsgWithdrawDelegatorRewardParams,
   createTxMultipleMsgWithdrawDelegatorReward,

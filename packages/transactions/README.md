@@ -10,8 +10,8 @@ There are many helper functions defined in `src/messages` which generate signabl
 import {
     createTxIBCMsgTransfer, IBCMsgTransferParams,
     createTransactionPayload, signatureToWeb3Extension,
-} from '@althea-net/transactions'
-import { altheaToEth, ethToAlthea } from '@althea-net/address-converter'
+} from '@gravity-bridge/transactions'
+import { altheaToEth, ethToAlthea } from '@gravity-bridge/address-converter'
 
 const params: IBCMsgTransferParams = {
     sourcePort: 'transfer',

@@ -1,10 +1,10 @@
-import { createMsgSetWithdrawAddress as protoMsgSetWithdrawAddress } from '@althea-net/proto'
+import { createMsgSetWithdrawAddress as protoMsgSetWithdrawAddress } from '@gravity-bridge/proto'
 
 import {
   generateTypes,
   createMsgSetWithdrawAddress,
   MSG_SET_WITHDRAW_ADDRESS_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import {
   MsgSetWithdrawAddressParams,
   createTxMsgSetWithdrawAddress,

@@ -1,4 +1,4 @@
-import { createMsgRevoke, RevokeMessages } from '@althea-net/proto'
+import { createMsgRevoke, RevokeMessages } from '@gravity-bridge/proto'
 
 import { createTransactionPayload } from '../base'
 

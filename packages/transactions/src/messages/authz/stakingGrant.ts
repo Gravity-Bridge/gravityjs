@@ -1,4 +1,4 @@
-import { createMsgGrant, createStakeAuthorization, Proto } from '@althea-net/proto'
+import { createMsgGrant, createStakeAuthorization, Proto } from '@gravity-bridge/proto'
 import { createTransactionPayload, TxContext } from '../base'
 
 export interface MsgStakeAuthorizationParams {
@@ -11,7 +11,7 @@ export interface MsgStakeAuthorizationParams {
 
 export const createEIP712MsgStakeAuthorization = () => {
   // TODO: EIP-712 Stake Authorization is blocked until StakeAuthorization
-  // is added to @althea-net/eip712
+  // is added to @gravity-bridge/eip712
   return {
     types: {},
     message: {},

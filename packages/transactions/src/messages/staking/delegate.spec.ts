@@ -1,9 +1,9 @@
-import { createMsgDelegate as protoMsgDelegate } from '@althea-net/proto'
+import { createMsgDelegate as protoMsgDelegate } from '@gravity-bridge/proto'
 import {
   generateTypes,
   createMsgDelegate,
   MSG_DELEGATE_TYPES,
-} from '@althea-net/eip712'
+} from '@gravity-bridge/eip712'
 import { MsgDelegateParams, createTxMsgDelegate } from './delegate'
 import { createTransactionPayload } from '../base'
 import TestUtils from '../../tests/utils'

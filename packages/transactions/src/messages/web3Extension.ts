@@ -1,4 +1,4 @@
-import { createWeb3Extension } from '@althea-net/proto'
+import { createWeb3Extension } from '@gravity-bridge/proto'
 import { Chain, Sender } from './common'
 
 export function signatureToWeb3Extension(
