@@ -21,7 +21,7 @@ Add the following line to an `.npmrc` file in your project root:
 Then run:
 
 ```bash
-npm install gravityjs
+npm install @gravity-bridge/gravityjs
 ```
 
 Or:
@@ -43,7 +43,7 @@ npmScopes:
 Then run:
 
 ```bash
-yarn add gravityjs
+yarn add @gravity-bridge/gravityjs
 ```
 
 Or:
