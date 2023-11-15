@@ -4,8 +4,8 @@ import { Coin } from '../../proto/cosmos/base/coin'
 export function createMsgSendToEth(
   sender: string,
   eth_dest: string,
-  denom: string,
   amount: string,
+  denom: string,
   bridge_fee: string,
   chain_fee: string,
 ) {
