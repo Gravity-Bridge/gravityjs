@@ -3,8 +3,8 @@ import {
   AminoTypes as AminoTypesClass,
 } from '@cosmjs/stargate'
 import {
-  createMicrotxAminoConverters,
-  createERC20AminoConverters,
+  createGravityAminoConverters,
+  createAuctionAminoConverters,
 } from '../messages/index'
 
 // TODO: Add missing Amino types (see x/**/codec.go)
@@ -13,8 +13,8 @@ export function createDefaultAminoConverters() {
   return {
     ...createDefaultCosmosAminoConverters(),
 
-    ...createMicrotxAminoConverters(),
-    ...createERC20AminoConverters(),
+    ...createGravityAminoConverters(),
+    ...createAuctionAminoConverters(),
   }
 }
 

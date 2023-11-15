@@ -1,4 +1,3 @@
-export * from './msgMicrotx'
-export * from './msgLiquify'
+export * from './msgBid'
 export * from './registry'
 export * from './aminoRegistry'

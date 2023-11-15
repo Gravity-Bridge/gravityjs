@@ -5,14 +5,18 @@ import {
   bankRegistryTypes,
   cryptoRegistryTypes,
   distributionRegistryTypes,
-  erc20RegistryTypes,
   evmRegistryTypes,
   govRegistryTypes,
   ibcRegistryTypes,
-  microtxRegistryTypes,
   stakingRegistryTypes,
   transactionsRegistryTypes,
 } from '../messages/index'
+
+import {
+  gravityRegistryTypes,
+  auctionRegistryTypes,
+} from '../messages/index'
+
 
 const parseType = (registryTypes: MessageType[], typeName: string) => {
   for (const type of registryTypes) {
@@ -29,13 +33,14 @@ export const registryTypes = [
   ...bankRegistryTypes,
   ...cryptoRegistryTypes,
   ...distributionRegistryTypes,
-  ...erc20RegistryTypes,
   ...evmRegistryTypes,
   ...govRegistryTypes,
   ...ibcRegistryTypes,
-  ...microtxRegistryTypes,
   ...stakingRegistryTypes,
   ...transactionsRegistryTypes,
+
+  ...gravityRegistryTypes,
+  ...auctionRegistryTypes,
 ]
 
 export const registry = {

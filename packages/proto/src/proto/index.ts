@@ -1,6 +1,5 @@
 export * as Cosmos from './cosmos/index'
 export * as IBC from './cosmos-ibc/index'
 export * as Ethermint from './ethermint/index'
-export * as Canto from './canto/index'
-export * as Lockup from './lockup/index'
-export * as Microtx from './microtx/index'
+export * as Gravity from './gravity/index'
+export * as Auction from './auction/index'

@@ -3,7 +3,7 @@
 ## Requirements
 
 ```sh
-yarn add @althea-net/proto
+yarn add @gravity-bridge/proto
 yarn add ethers
 ```
 
@@ -18,7 +18,7 @@ import {
   bytesToMsgEthereumTx,
   bytesToTxBody,
   bytesToTxRaw,
-} from '@althea-net/proto'
+} from '@gravity-bridge/proto'
 
 // Create the legacyTx
 const blockchainTx =
