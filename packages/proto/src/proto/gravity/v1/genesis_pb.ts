@@ -5,7 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
-import { Coin } from "../../cosmos/base/v1beta1/coin_pb.js";
+import { Coin } from "../../cosmos/base/coin";
 import { ERC20ToDenom, PendingIbcAutoForward, Valset } from "./types_pb.js";
 import { MsgConfirmBatch, MsgConfirmLogicCall, MsgSetOrchestratorAddress, MsgValsetConfirm } from "./msgs_pb.js";
 import { OutgoingLogicCall, OutgoingTransferTx, OutgoingTxBatch } from "./batch_pb.js";
@@ -409,4 +409,3 @@ export class GravityNonces extends Message<GravityNonces> {
     return proto3.util.equals(GravityNonces, a, b);
   }
 }
-

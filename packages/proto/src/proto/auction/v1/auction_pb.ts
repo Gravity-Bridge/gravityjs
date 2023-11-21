@@ -5,7 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
-import { Coin } from "../../cosmos/base/v1beta1/coin_pb.js";
+import { Coin } from "../../cosmos/base/coin";
 
 /**
  * AuctionPeriod represents a period of auctions.
@@ -204,4 +204,3 @@ export class AuctionId extends Message<AuctionId> {
     return proto3.util.equals(AuctionId, a, b);
   }
 }
-

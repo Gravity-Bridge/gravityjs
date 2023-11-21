@@ -5,8 +5,8 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
-import { Metadata } from "../../cosmos/bank/v1beta1/bank_pb.js";
-import { Coin } from "../../cosmos/base/v1beta1/coin_pb.js";
+import { Metadata } from "../../cosmos/bank/bank";
+import { Coin } from "../../cosmos/base/coin";
 
 /**
  * BridgeValidator represents a validator's ETH address and its power
@@ -217,7 +217,7 @@ export class ERC20ToDenom extends Message<ERC20ToDenom> {
 
 /**
  * UnhaltBridgeProposal defines a custom governance proposal useful for restoring
- * the bridge after a oracle disagreement. Once this proposal is passed bridge state will roll back events 
+ * the bridge after a oracle disagreement. Once this proposal is passed bridge state will roll back events
  * to the nonce provided in target_nonce if and only if those events have not yet been observed (executed on the Cosmos chain). This allows for easy
  * handling of cases where for example an Ethereum hardfork has occured and more than 1/3 of the vlaidtor set
  * disagrees with the rest. Normally this would require a chain halt, manual genesis editing and restar to resolve
@@ -467,4 +467,3 @@ export class PendingIbcAutoForward extends Message<PendingIbcAutoForward> {
     return proto3.util.equals(PendingIbcAutoForward, a, b);
   }
 }
-

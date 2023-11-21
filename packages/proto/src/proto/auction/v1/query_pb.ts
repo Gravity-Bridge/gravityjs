@@ -7,7 +7,7 @@ import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialM
 import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
 import { Params } from "./params_pb.js";
 import { Auction, AuctionPeriod } from "./auction_pb.js";
-import { Coin } from "../../cosmos/base/v1beta1/coin_pb.js";
+import { Coin } from "../../cosmos/base/coin";
 
 /**
  * @generated from message auction.v1.QueryParamsRequest
@@ -508,4 +508,3 @@ export class QueryAuctionPoolResponse extends Message<QueryAuctionPoolResponse> 
     return proto3.util.equals(QueryAuctionPoolResponse, a, b);
   }
 }
-

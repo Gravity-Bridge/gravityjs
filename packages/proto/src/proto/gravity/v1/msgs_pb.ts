@@ -5,7 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Any, Message, proto3, protoInt64 } from "@bufbuild/protobuf";
-import { Coin } from "../../cosmos/base/v1beta1/coin_pb.js";
+import { Coin } from "../../cosmos/base/coin";
 import { BridgeValidator } from "./types_pb.js";
 
 /**
@@ -1284,7 +1284,7 @@ export class MsgCancelSendToEthResponse extends Message<MsgCancelSendToEthRespon
 /**
  * This call allows anyone to submit evidence that a
  * validator has signed a valset, batch, or logic call that never
- * existed on the Cosmos chain. 
+ * existed on the Cosmos chain.
  * Subject contains the batch, valset, or logic call.
  *
  * @generated from message gravity.v1.MsgSubmitBadSignatureEvidence
@@ -1985,4 +1985,3 @@ export class EventSendToEthFeeCollected extends Message<EventSendToEthFeeCollect
     return proto3.util.equals(EventSendToEthFeeCollected, a, b);
   }
 }
-
