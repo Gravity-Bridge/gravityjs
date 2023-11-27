@@ -6,7 +6,7 @@ export const MSG_SEND_TO_ETH_TYPES = {
     { name: 'bridge_fee', type: 'TypeCoin[]' },
     { name: 'chain_fee', type: 'TypeCoin[]' },
   ],
-  TypeAmount: [
+  TypeCoin: [
     { name: 'denom', type: 'string' },
     { name: 'amount', type: 'string' },
   ],
@@ -32,13 +32,13 @@ export function createMsgSendToEth(
       ],
       bridge_fee: [
         {
-          bridge_fee,
+          amount: bridge_fee,
           denom,
         },
       ],
       chain_fee: [
         {
-          chain_fee,
+          amount: chain_fee,
           denom,
         },
       ],
