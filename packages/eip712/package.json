@@ -1,7 +1,7 @@
 {
   "name": "@gravity-bridge/eip712",
   "description": "EIP712 transaction creator for Gravity Bridge.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@cosmjs/proto-signing": "^0.28.13",
-    "@gravity-bridge/proto": "^0.0.1",
+    "@gravity-bridge/proto": "^0.0.6",
     "@metamask/eth-sig-util": "^4.0.1",
     "cosmjs-types": "^0.5.1",
     "link-module-alias": "^1.2.0",
