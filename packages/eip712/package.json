@@ -1,7 +1,7 @@
 {
   "name": "@gravity-bridge/eip712",
   "description": "EIP712 transaction creator for Gravity Bridge.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
