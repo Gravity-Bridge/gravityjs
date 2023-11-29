@@ -138,7 +138,7 @@ export function decodeProtobufSignDoc(bytes: Uint8Array) {
 
   const gasLimit = authInfo.fee.gasLimit.toString()
 
-  const fee = generateFee(amount.amount, amount.denom, gasLimit, feePayer)
+  const fee = generateFee(amount.amount, amount.denom, gasLimit)
 
   const type = eip712MessageType(aminoMsg)
 

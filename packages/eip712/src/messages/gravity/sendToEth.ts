@@ -2,9 +2,9 @@ export const MSG_SEND_TO_ETH_TYPES = {
   MsgValue: [
     { name: 'sender', type: 'string' },
     { name: 'eth_dest', type: 'string' },
-    { name: 'amount', type: 'TypeAmount[]' },
-    { name: 'bridge_fee', type: 'TypeBridgeFee[]' },
-    { name: 'chain_fee', type: 'TypeChainFee[]' },
+    { name: 'amount', type: 'TypeAmount' },
+    { name: 'bridge_fee', type: 'TypeBridgeFee' },
+    { name: 'chain_fee', type: 'TypeChainFee' },
   ],
   TypeAmount: [
     { name: 'denom', type: 'string' },
@@ -32,24 +32,18 @@ export function createMsgSendToEth(
     value: {
       sender,
       eth_dest,
-      amount: [
-        {
-          amount,
-          denom,
-        },
-      ],
-      bridge_fee: [
-        {
-          amount: bridge_fee,
-          denom,
-        },
-      ],
-      chain_fee: [
-        {
-          amount: chain_fee,
-          denom,
-        },
-      ],
+      amount: {
+        amount,
+        denom,
+      },
+      bridge_fee: {
+        amount: bridge_fee,
+        denom,
+      },
+      chain_fee: {
+        amount: chain_fee,
+        denom,
+      },
     },
   }
 }
