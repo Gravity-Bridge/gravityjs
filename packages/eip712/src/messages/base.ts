@@ -67,6 +67,7 @@ export function generateTypes(msgValues: object) {
       { name: 'sequence', type: 'string' },
     ],
     Fee: [
+      { name: 'feePayer', type: 'string' },
       { name: 'amount', type: 'Coin[]' },
       { name: 'gas', type: 'string' },
     ],
@@ -87,6 +88,7 @@ export function generateFee(
   amount: string,
   denom: string,
   gas: string,
+  feePayer: string,
 ) {
   return {
     amount: [
@@ -96,5 +98,6 @@ export function generateFee(
       },
     ],
     gas,
+    feePayer,
   }
 }

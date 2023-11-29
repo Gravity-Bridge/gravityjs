@@ -55,6 +55,7 @@ export const createLegacyEIP712Payload = (
     fee.amount,
     fee.denom,
     fee.gas,
+    sender.accountAddress,
   )
 
   const payloadMessages = wrapTypeToArray(typedData.message)
