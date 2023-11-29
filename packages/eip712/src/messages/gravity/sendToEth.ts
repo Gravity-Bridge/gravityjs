@@ -2,11 +2,19 @@ export const MSG_SEND_TO_ETH_TYPES = {
   MsgValue: [
     { name: 'sender', type: 'string' },
     { name: 'eth_dest', type: 'string' },
-    { name: 'amount', type: 'TypeCoin[]' },
-    { name: 'bridge_fee', type: 'TypeCoin[]' },
-    { name: 'chain_fee', type: 'TypeCoin[]' },
+    { name: 'amount', type: 'TypeAmount[]' },
+    { name: 'bridge_fee', type: 'TypeBridgeFee[]' },
+    { name: 'chain_fee', type: 'TypeChainFee[]' },
   ],
-  TypeCoin: [
+  TypeAmount: [
+    { name: 'denom', type: 'string' },
+    { name: 'amount', type: 'string' },
+  ],
+  TypeBridgeFee: [
+    { name: 'denom', type: 'string' },
+    { name: 'amount', type: 'string' },
+  ],
+  TypeChainFee: [
     { name: 'denom', type: 'string' },
     { name: 'amount', type: 'string' },
   ],
